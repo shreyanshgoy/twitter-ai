@@ -1,0 +1,45 @@
+LLM - ye llm jo hota hai ye data we work karta hai hum jis data se isko train karte hai ye usse data ka use karta hai
+but iske saath ek problrm hai ye real time data pe work nahi karta agar mai isse 2024 ka data dunga to 25 ka nahi bataye ga 
+so isko solve karne ke liye we use mcp server jo ki action perform kaerta hai agar hum isse dede ki ye 
+function hai agar koi puche kuch to iss function ko run kar do
+
+
+
+working : 
+
+so firsty we setup the LLM by api we can take the api of google gemini 2.0 flash by this
+we can connect our llm to the mcp server this server is made up of express now in this mcp server
+werun some tools like add two no. , create twit so when the user gave input
+the llm go to mcp server and access the tools of that and then take the otput from it and show it in llm 
+
+
+
+the mcp server is of two types stdio(standard input output server)  we can use this locally
+and the other one is server side call this will use when the mcp and llm both are at diffrent place and we make an network call  
+
+
+
+
+now the method to setup the llm client server so these are the steps that you have to follow
+1. nppm init -y
+
+
+
+
+index.ji
+
+readline.createInterface() ek interface banata hai jo terminal se input aur output handle karta hai.
+
+input: process.stdin: Ye bolta hai ki input console/terminal se lena hai (keyboard se).
+
+output: process.stdout: Ye bolta hai ki output terminal me dikhana hai (console.log jaisa).
+
+rl is interface ko refer karta hai, jiske through tum input le sakte ho with await rl.question(...).
+
+
+
+rl.question('you: ') user ko prompt karega terminal me "you: " likh ke.
+
+await ka matlab hai ki program rukega jab tak user input nahi deta.
+
+Jo bhi input milega wo question variable me store hoga.
