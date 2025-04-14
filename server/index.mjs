@@ -80,47 +80,6 @@ app.listen(3001,()=>{
 // // SSEServerTransport iski madad se behind the scene hamara ai server se saath communicate kar pata hai
 
 
-// import express from "express";
-// import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
-// import { SSEServerTransport } from "@modelcontextprotocol/sdk/server/sse.js";
 
-// const app = express();
-// app.use(express.json());
-
-// const server = new McpServer({
-//   name: "example-server",
-//   version: "1.0.0"
-// });
-
-
-
-// const transports = {};
-
-// // Server to client
-// app.get("/sse", async (req, res) => {
-//   const transport = new SSEServerTransport(res); // fixed argument
-//   transports[transport.sessionId] = transport;
-
-//   res.on("close", () => {
-//     delete transports[transport.sessionId];
-//   });
-
-//   await server.connect(transport);
-// });
-
-// // Client to server
-// app.post("/messages", async (req, res) => {
-//   const sessionId = req.query.sessionId;
-//   const transport = transports[sessionId];
-//   if (transport) {
-//     await transport.handlePostMessage(req, res);
-//   } else {
-//     res.status(400).send("No transport found for sessionId");
-//   }
-// });
-
-// app.listen(3001, () => {
-//   console.log("Server is running on http://localhost:3001");
-// });
 
 
